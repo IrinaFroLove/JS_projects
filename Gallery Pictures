@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>Карточки | Проект 1</title>
+</head>
+<body>
+<div class="container">
+  <div
+      class="slide"
+      style="background-image: url('https://images.unsplash.com/photo-1621242050745-2d49f1a94a85?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2268&q=80://images.unsplash.com/photo-1540736358959-de4ce04b7254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=3024&q=80');"
+  >
+    <h3>Kiev</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1609605992223-db8c708fc215?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1035&q=80');
+        "
+  >
+    <h3>Rome</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1527267207156-3372670819dc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=988&q=80');
+        "
+  >
+    <h3>New York</h3>
+  </div>
+  <div
+      class="slide active"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1588010881333-68617b862b1f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+        "
+  >
+    <h3>Berlin</h3>
+  </div>
+  <div
+      class="slide"
+      style="
+          background-image: url('https://images.unsplash.com/photo-1549144511-f099e773c147?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80');
+        "
+  >
+    <h3>Paris</h3>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
+
+
