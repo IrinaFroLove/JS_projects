@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title></title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="googlebot" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script
+    type="text/javascript"
+    src="/js/lib/dummy.js"
+    
+  ></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+
+
+  <style id="compiled-css" type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #d3d481c9;
+  display: flex;
+  padding-top: 5rem;
+  justify-content: center;
+  overflow: hidden;
+  margin: 20px;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.row {
+  display: flex;
+  width: 600px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.col-header {
+  width: 150px;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  padding: 0.8rem 1rem;
+  color: #fff;
+}
+
+.item {
+  width: 150px;
+  height: 66px;
+  border: 1px solid #eee;
+  box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+  border-radius: 20px;
+  background: #f7f6f7;
+  padding: 0.8rem 1rem;
+  color: #828282;
+  text-align: center;
+  cursor: grab;
+}
+
+.item:active {
+  cursor: grabbing;
+}
+
+.placeholder {
+  width: 150px;
+  height: 66px;
+}
+
+.happy {
+  background: linear-gradient(90deg, #2bb660 0%, #f9fd22 179.25%);
+}
+
+.content {
+  background: linear-gradient(90deg, #209cff 0%, #68e0cf 100%);
+}
+
+.upset {
+  background: linear-gradient(90deg, #94303d 0%, #f48f8f 100%);
+}
+
+.hold {
+  border: 5pt solid rgba(204, 211, 113, 0.377);
+  text-align: center;
+  transform: scale(.8);
+}
+
+.hide {
+  display: none;
+
+}
+
+.hovered {
+  border-top: 2px solid rgb(248, 248, 248);
+}
+
+    /* EOS */
+  </style>
+
+  <script id="insert"></script>
+
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drag & Drop | Project 2</title>
+  </head>
+  <body>
+    <div>
+      <h1>How Are You Feeling Today?</h1>
+      <div class="row">
+          <div class="col-header happy">Happy</div>
+          <div class="col-header content">Content</div>
+          <div class="col-header upset">Upset</div>
+      </div>
+
+      <div class="row">
+        <div class="placeholder">
+          <div class="item"
+          draggable="true">I feel ...</div>
+        </div>
+        <div class="placeholder"></div>
+        <div class="placeholder"></div>
+      </div>
+      
+    </div>
+    <script src ="app.js"></script>
+  </body>
+</html>
+
+
+    <script type="text/javascript">//<![CDATA[
+
+
+const item = document.querySelector('.item')
+const placeholders = document.querySelectorAll('.placeholder')
+
+item.addEventListener('dragstart', dragstart)
+item.addEventListener('dragend', dragend)
+
+for (const placeholder of placeholders) {
+    placeholder.addEventListener('dragover', dragover)
+    placeholder.addEventListener('dragenter', dragenter)
+    placeholder.addEventListener('dragleave', dragleave)
+    placeholder.addEventListener('drop', dragdrop)
+
+
+
+}
+
+function dragstart(event) {
+    // console.log('drag start', event.targ et)
+    event.target.classList.add('hold')
+    setTimeout(() => event.target.classList.add('hide', 0))
+}
+
+
+function dragend() {
+    // console.log('drag end')
+    event.target.classList.remove('hold', 'hide')
+
+}
+
+function dragover(event) {
+    event.preventDefault()
+    // console.log('drag over')
+}
+
+function dragenter(event) {
+    event.target.classList.add('hovered')
+    // console.log('drag enter')
+
+}
+
+function dragleave(event) {
+    event.target.classList.remove('hovered')
+    // console.log('drag leave')
+
+}
+
+function dragdrop(event) {
+    event.target.classList.remove('hovered')
+    event.target.append(item)
+    // console.log('drag drop')
+
+}
+
+
+
+  //]]></script>
+
+  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "06pqarb5"
+      }], "*")
+    }
+
+    // always overwrite window.name, in case users try to set it manually
+    window.name = "result"
+  </script>
+
+
+</body>
+</html>
